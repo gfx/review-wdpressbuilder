@@ -1,6 +1,8 @@
 # Review::Wdpressbuilder
 
-TODO: Write a gem description
+Re:VIEWフォーマットからWEB+DB PRESS編集部が使える形式にするRe:VIEWのカスタムビルダです。
+
+現在は[md2inao](https://github.com/naoya/md2inao)で処理できるmarkdownに変換しますが、将来的にはInDesign tagged textやInDesign XMLに変換する可能性があります。
 
 ## Installation
 
@@ -20,7 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+review-compile --target=wdpress
+```
 
 ## Contributing
 
