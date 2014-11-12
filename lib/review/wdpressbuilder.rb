@@ -1,6 +1,8 @@
 require "review/wdpressbuilder/version"
 
+require 'review/markdownbuilder'
+
 module Review
-  module WDPRESSBuilder
+  module WDPRESSBuilder < MARKDOWNBuilder
   end
 end

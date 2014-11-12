@@ -5,11 +5,11 @@ require 'review/wdpressbuilder/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "review-wdpressbuilder"
-  spec.version       = Review::Wdpressbuilder::VERSION
+  spec.version       = Review::WDPRESSBuilder::VERSION
   spec.authors       = ["FUJI Goro (gfx)"]
   spec.email         = ["gfuji@cpan.org"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Re:VIEW custom builder for the WEB+DB PRESS editorial team}
+  spec.description   = spec.summary
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "review"
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
 end
