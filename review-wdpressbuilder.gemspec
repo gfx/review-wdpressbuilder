@@ -5,7 +5,7 @@ require 'review/wdpressbuilder/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "review-wdpressbuilder"
-  spec.version       = Review::WDPRESSBuilder::VERSION
+  spec.version       = ReVIEW::WDPRESSBuilder::VERSION
   spec.authors       = ["FUJI Goro (gfx)"]
   spec.email         = ["gfuji@cpan.org"]
   spec.summary       = %q{Re:VIEW custom builder for the WEB+DB PRESS editorial team}
