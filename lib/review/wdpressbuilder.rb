@@ -30,6 +30,16 @@ module ReVIEW
       blank
     end
 
+    def inline_list(id)
+      result = super
+      @inline_list_set ||= {}
+      unless @inline_list_set[result]
+        @inline_list_set[result] = true
+        result = "**#{result}**"
+      end
+      result
+    end
+
     # @override
     def list_header(id, caption)
       blank
@@ -43,12 +53,11 @@ module ReVIEW
 
     # @override
     def inline_fn(id)
-      "(注#{@chapter.footnote(id).number})"
+      "(注:#{compile_inline(@chapter.footnote(id).content)})"
     end
 
     # @override
     def footnote(id, str)
-      puts "(注#{@chapter.footnote(id).number}: #{compile_inline(str)})"
       blank
     end
   end
