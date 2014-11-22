@@ -33,8 +33,8 @@ module ReVIEW
     def inline_list(id)
       result = super
       @inline_list_seen ||= {}
-      unless @inline_list_seen[result]
-        @inline_list_seen[result] = true
+       unless @inline_list_seen["#{@chapter.number}.#{id}"]
+        @inline_list_seen["#{@chapter.number}.#{id}"] = true
         result = "**#{result}**"
       end
       result
@@ -42,9 +42,10 @@ module ReVIEW
 
     def inline_img(id)
       result = super
+      "**#{result}**"
       @inline_img_seen ||= {}
-      unless @inline_img_seen[result]
-        @inline_img_seen[result] = true
+      unless @inline_img_seen["#{@chapter.number}.#{id}"]
+        @inline_img_seen["#{@chapter.number}.#{id}"] = true
         result = "**#{result}**"
       end
       result
