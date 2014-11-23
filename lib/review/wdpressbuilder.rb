@@ -30,6 +30,10 @@ module ReVIEW
       blank
     end
 
+    def inline_i(str)
+      "_#{str.gsub(/\_/, '\_')}_"
+    end
+
     def inline_list(id)
       result = super
       @inline_list_seen ||= {}
